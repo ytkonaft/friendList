@@ -1,0 +1,176 @@
+@import "bourbon/bourbon"
++font-face("OpenSansRegular", "../fonts/OpenSansRegular", normal, $file-formats: eot woff ttf)
++font-face("OpenSansSemibold", "../fonts/OpenSansSemibold", normal, $file-formats: eot woff ttf)
+
+
+html
+	font-size: 16px
+body
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 1rem
+	min-width: 320px
+	margin: 0
+	background-color: #eee
+	padding: 0
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+*
+	outline: none !important
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+.clearfix:after,
+.clearfix:before
+	content: " "
+	display: table
+	clear: both
+
+h1 
+	font: 20px/50px 'OpenSansSemibold'
+	color: #fff 
+	background-color: #ff8663
+	margin: 0
+	padding-left: 20px
+h2 
+	font: 16px/28px 'OpenSansSemibold'
+	margin: 0
+	padding-bottom: 10px 
+	margin-bottom: 10px
+	padding-left: 5px
+	border-bottom: 1px solid #eee	
+	color: #696666
+#friendsTable
+	width: 100%
+	max-width: 920px 
+	overflow: hidden
+	border-radius: 20px 
+	background-color: #FFF
+	margin: 60px auto
+.col-left,
+.col-right
+	float: left
+	width: 50%
+	padding: 15px
+	box-sizing: border-box
+.col-left
+	border-right: 1px solid #eaeaea
+input[type="text"]
+	width: 100%
+	height: 40px 
+	margin-bottom: 30px
+	padding-left: 15px
+	border-radius: 20px
+	border: 2px solid #eaeaea
+	background-color: #eaeaea
+	box-sizing: border-box
+	+transition(all 0.3s ease)
+	&:focus 
+		background-color: #efefef
+		border-color: rgba(255,134,99,.6)
+#friends
+
+	padding: 15px
+	height: 400px
+	overflow-y: scroll
+#sort
+	padding: 15px
+	height: 400px
+	overflow-y: scroll	
+	.friend 
+		button
+			@include transform(rotate(45deg))
+.friend
+	line-height: 60px
+	padding-left: 15px
+	margin: 10px 0  
+	padding: 5px 15px
+	border-radius: 20px
+	cursor: move
+	background-color: #fff
+	position: relative
+	box-sizing: border-box
+	+transition(background-color 0.3s ease)
+	&.fx 
+		position: fixed
+		background-color: #eaeaea
+		opacity: 0.6
+		button 
+			display: none
+	&:hover 					
+		background-color: #eaeaea
+	button 
+		border: none 
+		background-color: transparent
+		width: 30px 
+		height: 30px 
+		position: absolute
+		top: 50%
+		right: 15px
+		border-radius: 50%
+		margin-top: -15px
+		+transition(all 0.3s ease)
+		cursor: pointer
+		&:after,
+		&:before 
+			position: absolute
+			top: 50%
+			left: 50%
+			content: ''
+			background-color: #ff8663
+			border-radius: 3px 
+		&:after
+			width: 20px 
+			height: 4px
+			margin: -2px 0 0 -10px 
+
+		&:before 
+			width: 4px 
+			height: 20px 
+			margin: -10px 0 0 -2px
+		&:hover 
+			background-color: #FFF
+	span 
+		display: inline-block
+		vertical-align: middle
+	img 
+		height: 60px 
+		vertical-align: middle
+		width: 60px
+		margin-right: 15px
+		display: inline-block 
+		border-radius: 50%
+
+
+.foot
+	padding: 5px 20px 
+	line-height: 50px 
+	text-align: right
+	clear: both
+	background-color: #424242
+	#save 
+		display: inline-block
+		padding: 0 15px 
+		height: 35px 
+		line-height: 35px 
+		color: #fff
+		background-color: #ff8663
+		text-decoration: none	
+		border-radius: 10px
+		vertical-align: middle
+		border: 2px solid #ff8663
+		+transition(all 0.3s ease)
+		&:hover 
+			background-color: #424242 
+			color: #fff 
+
+
+@import "../css/media"

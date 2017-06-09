@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>FriendsSortList</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<div id="friendsTable" class="clearfix">
+  <h1>Выберите друзей</h1>
+	<div class="col-left">
+		<h2>Ваши друзья</h2>
+		<input type="text" data-rel="friends" placeholder="Поиск по друзьям" value="">
+		 <div id="friends"></div>	
+	</div>
+	<div class="col-right">
+		<h2>Друзья в списке</h2>
+		<input type="text" data-rel="sort" placeholder="Поиск по списку друзей" value="">
+		 <div id="sort"></div>	
+	</div>
+	<div class="foot"><a href="#" id="save">Сохранить</a></div>
+</div>
+
+<div id="test"></div>
+
+
+	<script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
